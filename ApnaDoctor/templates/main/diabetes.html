@@ -1,0 +1,187 @@
+
+ {% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}       
+          <!--  ************************* Page Title Starts Here ************************** -->
+               <div class="page-nav no-margin row">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Diabetes Prediction</h2>
+                           <ul>
+                               <li> <a href="{% url 'home' %}" ss="fas fa-home"></i> Home</a></li>
+                               <li><i class="fas fa-angle-double-right"></i> Diabetes</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+       
+    <!-- ######## Page  Title End ####### -->
+       
+<div class="container">
+  {% if context %}
+    {% if context == '1' %}
+    <div class="display-4 my-2 text-center">
+    I'm sorry but, You have Diabetes :/
+  </div>
+    <section class="with-medical row">
+        <div class="container">
+            
+            
+                <div class="row">
+                <img src="{% static 'images/diabetes.jpg' %}">
+            </div>
+            <div class="row">
+                <p class="para">
+                    Staying physically active is a powerful tool for managing diabetes—but as with any tool, you want to use it safely. These four tips can help you do just that.<br><br>
+                    <b>How to Live Your Best With Diabetes?</b>
+                    <ul style="padding: 0px 35px 35px 35px; font-size: 25px;">
+                        <li>1. Get a "preflight" check.</li>
+                        <li>2. Spread your activity throughout the week.</li>
+                        <li>3. Time your exercise wisely.</li>
+                        <li>4. Be prepared.</li>
+                    </ul>
+
+                </p>
+            </div>
+            
+        </div>
+    </section>
+  {% else %}
+  <div class="display-4 my-2 text-center">
+    Yippe! You are Healthy, having not any Diabetes Problems :)
+  </div>
+  <div class="container">
+            <div class="row">
+                <img src="{% static 'images/diabetes.jpg' %}">
+            </div>
+        </div>
+  {% endif %}
+  {% else %}
+
+    <section class="with-medical row">
+        <div class="container">
+            <div class="row">
+                <img src="{% static 'images/diabetes.jpg' %}">
+            </div>
+            <div class="row">
+                <p class="para">
+                    Diabetes is a common chronic disease and poses a great threat to human health. The characteristic of diabetes is that the blood glucose is higher than the normal level, which is caused by defective insulin secretion or its impaired biological effects, or both. Diabetes can lead to chronic damage and dysfunction of various tissues, especially eyes, kidneys, heart, blood vessels and nerves.<br><br>
+                    Diabetes if untreated may turn into fatal and directly or indirectly invites lot of other diseases such as heart attack, heart failure, brain stroke and many more. Therefore, early detection of diabetes is very significant so that timely action can be taken and the progression of the disease may be prevented to avoid further complications.<br><br>
+                    Healthcare organizations accumulate huge amount of data including Electronic health records, images, omics data, and text but gaining knowledge and insight into the data remains a key challenge.
+                </p>
+            </div>
+        </div>
+    </section>
+        <div class="container"><h2 align="center">Let's Get Started!</h2>
+        <p align="center">Start by filling your details and let the model do their work.</p></div>
+
+    
+    <div class="container mt-4">
+    <form class="row" method="POST" action="{% url 'diabetes' %}">
+      {% csrf_token %}
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="pregnancies">Pregnancies</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="pregnancies"
+            value="0"
+            name="pregnancies"
+          />
+        </div>
+        <div class="form-group">
+          <label for="glucose">Glucose</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="glucose"
+            value="0"
+            name="glucose"
+          />
+        </div>
+        <div class="form-group">
+          <label for="bloodpressure">Blood Pressure</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="bloodpressure"
+            value="0"
+            name="bloodpressure"
+          />
+        </div>
+        <div class="form-group">
+          <label for="skinthickness">Skin Thickness</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="skinthickness"
+            value="0"
+            name="skinthickness"
+          />
+        </div>
+        <div class="form-group">
+          <label for="insulin">Insulin</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="insulin"
+            value="0"
+            name="insulin"
+          />
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="form-group">
+          <label for="bmi">BMI</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="bmi"
+            value="0"
+            name="bmi"
+          />
+        </div>
+        <div class="form-group">
+          <label for="pedigree">Diabetes Prediction Function</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="pedigree"
+            value="0"
+            name="pedigree"
+          />
+        </div>
+        <div class="form-group mb-5">
+          <label for="age">Age</label>
+          <input
+            type="number"
+            step=".00001"
+            class="form-control"
+            id="age"
+            value="0"
+            name="age"
+          />
+        </div>
+        <button type="submit" class="btn-lg btn-block btn btn-danger mb-5">
+          Submit
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+      {% endif %}
+        
+     {% endblock %}
