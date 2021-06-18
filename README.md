@@ -4,6 +4,8 @@
 # Disease Predictor Model
 A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast Cancer Prediciton using various Machine Learning Algorithms based on the Kaggle Datasets.
 
+<p align="center"><img src="screenshot.jpg" /></p>
+
 ## Technologies Used:
 1. Python
 2. Django
