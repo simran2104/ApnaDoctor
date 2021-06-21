@@ -183,9 +183,9 @@ def Breast(request):
         print(predictions)
 
         if int(predictions[0]) == 1:
-            value = 'have'
+            value = '1'
         elif int(predictions[0]) == 0:
-            value = "don\'t have"
+            value = "2"
 
     return render(request,
                   'main/breast.html',
