@@ -14,6 +14,9 @@ A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast C
 5. Bootstrap
 6. Kaggle Dataset
 
+## System Design:
+<p align="center"><img src="design.png" width="600" height="500" /></p>
+
 ## Demo:
 Have a look on the website being deployed on pythonanywhere.com <a href="https://simmi1234.pythonanywhere.com/">ApnaDoctor</a>
 ## Contributing:
