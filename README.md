@@ -26,7 +26,7 @@ Have a look on the website being deployed on pythonanywhere.com <a href="https:/
 
 
 ## Snapshots:
-Know More about "ApnaDoctor" through <a href="https://github.com/simran2104/ApnaDoctor/edit/main/README.md">Snapshots</a>.
+Know More about "ApnaDoctor" through <a href="https://github.com/simran2104/ApnaDoctor/blob/main/SnapShots.pdf">Snapshots</a>.
 
 ## Contributing:
 Please Fork this project and send me a pull request.
