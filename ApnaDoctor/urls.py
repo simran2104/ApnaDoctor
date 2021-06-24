@@ -19,7 +19,7 @@ from apps.main.views import HomeView, Diabetes, Heart, Breast
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("",HomeView.as_view(),name="home"),
+    path("",HomeView,name="home"),
     path("Diabetes",Diabetes,name="diabetes"),
     path("Heart",Heart,name="heart"),
     path("Breast",Breast,name="breast"),

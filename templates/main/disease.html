@@ -1,0 +1,92 @@
+
+ {% extends 'base.html' %}
+
+{% load static %}
+
+
+{% block content %}   
+        
+          <!--  ************************* Page Title Starts Here ************************** -->
+               <div class="page-nav no-margin row">
+                   <div class="container">
+                       <div class="row">
+                           <h2>Disease Prediction</h2>
+                           <ul>
+                               <li> <a href="{% url 'home' %}"><i class="fas fa-home"></i> Home</a></li>
+                               <li><i class="fas fa-angle-double-right"></i> Heart Disease</li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+       
+    <!-- ######## Page  Title End ####### -->
+
+<div class="container">
+  {% if context %}
+    {% if context == '1' %}
+    <div class="display-4 my-2 text-center">
+    I'm sorry but, You have heart disease :/
+  </div>
+  <section class="with-medical row">
+        <div class="container">
+            
+            
+                <div class="row">
+                <img src="{% static 'images/heart-2.jpg' %}">
+            </div>
+            <div class="row">
+                <p class="para">
+                    Heart disease is the leading cause of death for both men and women in the United States. Take steps today to lower your risk of heart disease.<br><br>
+                    <b>How to Live Your Best With any Heart Disease?</b>
+                    <ul style="padding: 0px 35px 35px 35px; font-size: 25px;">
+                        <li>1. Eat healthy.</li>
+                        <li>2. Get active.</li>
+                        <li>3. Stay at a healthy weight.</li>
+                        <li>4. Quit smoking and stay away from secondhand smoke.</li>
+                        <li>5. Control your cholesterol and blood pressure.</li>
+                        <li>6. Drink alcohol only in moderation.</li>
+                        <li>7. Manage stress.</li>
+                    </ul>
+
+                </p>
+            </div>
+            
+        </div>
+    </section>
+  {% else %}
+  <div class="display-4 my-2 text-center">
+    Yippe! You are Healthy, having not any Heart Disease :)
+  </div>
+  <div class="container">
+            <div class="row">
+                <img src="{% static 'images/heart-2.jpg' %}">
+            </div>
+        </div>
+  {% endif %}
+  {% else %}
+
+  <section class="with-medical row">
+        <div class="container">
+            <div class="row">
+                <img src="{% static 'images/heart-2.jpg' %}">
+            </div>
+            <div class="row">
+                <p class="para">
+                    Among various life-threatening diseases, heart disease has garnered a great deal of attention in medical research. The diagnosis of heart disease is a challenging task, which can offer automated prediction about the heart condition of patient so that further treatment can be made effective. The diagnosis of heart disease is usually based on signs, symptoms and physical examination of the patient. There are several factors that increase the risk of heart disease, such as smoking habit, body cholesterol level, family history of heart disease, obesity, high blood pressure, and lack of physical exercise.<br><br>
+                    A major challenge faced by health care organizations, such as hospitals and medical centers, is the provision of quality services at affordable costs.1 The quality service implies diagnosing patients properly and administering effective treatments. The available heart disease database consists of both numerical and categorical data. Before further processing, cleaning and filtering are applied on these records in order to filter the irrelevant data from the database.<br><br>The proposed system can determine an exact hidden knowledge, ie, patterns and relationships associated with heart disease from a historical heart disease database. It can also answer the complex queries for diagnosing heart disease; therefore, it can be helpful to health care practitioners to make intelligent clinical decisions. 
+                </p>
+            </div>
+
+  <!-- 
+      Form Here 
+      -->
+
+</div>
+        </div>
+    </section>
+
+  {% endif %}
+       
+    
+    
+     {% endblock %}
