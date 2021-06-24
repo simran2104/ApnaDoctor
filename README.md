@@ -2,7 +2,7 @@
 
 
 # Disease Predictor Model
-A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast Cancer Prediction using various Machine Learning Algorithms based on the Kaggle Datasets.
+A Web Application for Disease Prediction using various Machine Learning Algorithms based on the Kaggle Datasets.
 
 <p align="center"><img src="Screenshot.jpg" /></p>
 
