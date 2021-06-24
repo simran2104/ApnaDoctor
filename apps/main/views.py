@@ -10,6 +10,7 @@ from django.views.generic import TemplateView
 
 def HomeView(request):
     value = "None"
+    name="None"
     if request.method == 'POST':
         l1=['back_pain','constipation','abdominal_pain','diarrhoea','mild_fever','yellow_urine',
         'yellowing_of_eyes','acute_liver_failure','fluid_overload','swelling_of_stomach',
@@ -119,7 +120,9 @@ def HomeView(request):
         else:
             value="No Output"
 
-    print(value)
+        name=request.POST['name']
+
+
 
     return render(request,
                   'main/index.html',
@@ -128,7 +131,8 @@ def HomeView(request):
                       'title': 'Disease Prediction',
                       'active': 'btn btn-success peach-gradient text-white',
                       'disease': True,
-                      'background': 'bg-primary text-white'
+                      'background': 'bg-primary text-white',
+                      'name': name
                   })
 
 def Diabetes(request):

@@ -4,28 +4,50 @@
 
 
 {% block content %}
-    
+
     <section class="sesion-type">
              <div class="session-title row">
             <h2>Disease Prediction Model</h2>
-            <p>A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast Cancer Prediciton using various Machine Learning Algorithms based on the Kaggle Datasets.</p>
+            <!-- <p>A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast Cancer Prediciton using various Machine Learning Algorithms based on the Kaggle Datasets.</p> -->
         </div>
 
 
-        <div class="container"><h2 align="center">Let's Get Started!</h2>
+        <div class="container">
         <p align="center">Start by filling your details and let the model do their work.</p></div>
 
-       
+
+{% if context == "None" %}
+{% else %}
+            {% if context == "No Output" %}
+                <div class="container" style="background-color: #fadce4;" ><p align="center"><br><b>Output: </b>No such Disease has been found.</p><br></div>
+            {% else %}
+            <div class="container" style="background-color: #fadce4;" ><p align="center"><br><b>Output: </b>{{ name }}, You have most of the chances of having <b>{{ context }}</b>.</p><br></div>
+            {% endif %}
+{% endif %}
 
 
-    
+
   <div class="container mt-4">
     <form class="row" method="POST" action="{% url 'home' %}">
       {% csrf_token %}
+
+      <div class="col-md-10">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input
+            class="form-control"
+            id="name"
+            placeholder="Enter your Name"
+            name="name"
+            required
+          />
+        </div>
+      </div>
       <div class="col-md-4">
         <div class="form-group">
           <label for="Symptom1">Symptom1</label>
           <select required class="form-control" id="Symptom1" name="Symptom1" >
+            <option value="" disabled selected>Select your Symptom</option>
             <option value='abdominal_pain' >abdominal_pain</option>
             <option value='abnormal_menstruation' >abnormal_menstruation</option>
             <option value='acute_liver_failure' >acute_liver_failure</option>
@@ -126,6 +148,7 @@
         <div class="form-group">
           <label for="Symptom2">Symptom2</label>
           <select required class="form-control" id="Symptom2" name="Symptom2" >
+            <option value="" disabled selected>Select your Symptom</option>
             <option value='abdominal_pain' >abdominal_pain</option>
             <option value='abnormal_menstruation' >abnormal_menstruation</option>
             <option value='acute_liver_failure' >acute_liver_failure</option>
@@ -223,12 +246,13 @@
             <option value='chest_pain' >chest_pain</option>
           </select>
         </div>
-        
+
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label for="Symptom3">Symptom3</label>
           <select required class="form-control" id="Symptom3" name="Symptom3" >
+            <option value="" disabled selected>Select your Symptom</option>
             <option value='abdominal_pain' >abdominal_pain</option>
             <option value='abnormal_menstruation' >abnormal_menstruation</option>
             <option value='acute_liver_failure' >acute_liver_failure</option>
@@ -328,6 +352,7 @@
         <div class="form-group">
           <label for="Symptom4">Symptom4</label>
           <select required class="form-control" id="Symptom4" name="Symptom4" >
+            <option value="" disabled selected>Select your Symptom</option>
             <option value='abdominal_pain' >abdominal_pain</option>
             <option value='abnormal_menstruation' >abnormal_menstruation</option>
             <option value='acute_liver_failure' >acute_liver_failure</option>
@@ -424,12 +449,13 @@
             <option value='yellowing_of_eyes' >yellowing_of_eyes</option>
           </select>
         </div>
-        
+
       </div>
       <div class="col-md-4">
         <div class="form-group">
           <label for="Symptom5">Symptom5</label>
           <select required class="form-control" id="Symptom5" name="Symptom5" >
+            <option value="" disabled selected>Select your Symptom</option>
             <option value='abdominal_pain' >abdominal_pain</option>
             <option value='abnormal_menstruation' >abnormal_menstruation</option>
             <option value='acute_liver_failure' >acute_liver_failure</option>
@@ -528,19 +554,11 @@
         </div>
 
         <button type="submit" class="btn-lg btn-block btn btn-danger mb-5">
-          Submit
+          Predict
         </button>
       </div>
     </form>
   </div>
-{% if context == "None" %}
-{% else %}
-            {% if context == "No Output" %}
-                <div class="container"><p align="center"><b>Output: </b>No such Disease has been found.</p></div>
-            {% else %}
-            <div class="container"><p align="center"><b>Output: </b>You have most of the chances of having <b>{{ context }}</b>.</p></div>
-            {% endif %}
-{% endif %}
 
 
 </section>
