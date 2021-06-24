@@ -4,7 +4,7 @@
 # Disease Predictor Model
 A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast Cancer Prediction using various Machine Learning Algorithms based on the Kaggle Datasets.
 
-<p align="center"><img src="Screenshot.jpg" width="800" height="700" /></p>
+<p align="center"><img src="Screenshot.jpg" /></p>
 
 ## Technologies Used:
 1. Python
@@ -16,6 +16,9 @@ A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast C
 
 ## System Design:
 <p align="center"><img src="design.png" width="600" height="500" /></p>
+
+## Sample Output:
+<p align="center"><img src="Output.jpg" /></p>
 
 ## Demo:
 Have a look on the website being deployed on pythonanywhere.com <a href="https://simmi1234.pythonanywhere.com/">ApnaDoctor</a>
