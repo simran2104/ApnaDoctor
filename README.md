@@ -21,7 +21,7 @@ A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast C
 Have a look on the website being deployed on pythonanywhere.com <a href="https://simmi1234.pythonanywhere.com/">ApnaDoctor</a>
 ## Contributing:
 
-Please Fork this project and send us a pull request.
+Please Fork this project and send me a pull request.
 
 ## Authors:
 <a href="https://simrandhiman.me/">Simran Dhiman</a>
