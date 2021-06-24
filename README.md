@@ -15,7 +15,7 @@ A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast C
 6. Kaggle Dataset
 
 ## System Design:
-<p align="center"><img src="design.png" width="600" height="500" /></p>
+<p align="center"><img src="System-Design.png" width="600" height="500" /></p>
 
 ## Sample Output:
 <p align="center"><img src="predicted.jpg" /></p>
