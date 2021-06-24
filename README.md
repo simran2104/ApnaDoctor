@@ -18,6 +18,7 @@ A Web Application for Heart Disease Prediction, Diabetes Prediction and Breast C
 <p align="center"><img src="design.png" width="600" height="500" /></p>
 
 ## Sample Output:
+<p align="center"><img src="predicted.jpg" /></p>
 
 ## Demo:
 Have a look on the website being deployed on pythonanywhere.com <a href="https://simmi1234.pythonanywhere.com/">ApnaDoctor</a>
